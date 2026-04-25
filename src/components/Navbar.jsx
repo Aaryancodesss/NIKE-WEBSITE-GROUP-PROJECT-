@@ -27,7 +27,7 @@ const Navbar = ({ cartCount, onOpenCart }) => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold tracking-tighter z-50">AURA.</Link>
         
-        {/* Desktop Nav */}
+        
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <Link key={link.name} to={link.path} className="group relative text-sm font-medium uppercase tracking-wider text-gray-300 hover:text-white transition-colors">
@@ -57,7 +57,7 @@ const Navbar = ({ cartCount, onOpenCart }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
