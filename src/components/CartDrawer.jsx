@@ -8,7 +8,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, updateQuantity, removeItem }) 
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Overlay */}
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -17,7 +17,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, updateQuantity, removeItem }) 
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
           />
 
-          {/* Drawer */}
+          
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
@@ -25,7 +25,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, updateQuantity, removeItem }) 
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-dark-900 border-l border-dark-800 z-50 flex flex-col shadow-2xl"
           >
-            {/* Header */}
+            
             <div className="flex items-center justify-between p-6 border-b border-dark-800">
               <h2 className="text-xl font-semibold tracking-wide flex items-center gap-2">
                 <ShoppingBag className="w-5 h-5" /> Your Cart
@@ -35,7 +35,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, updateQuantity, removeItem }) 
               </button>
             </div>
 
-            {/* Cart Items */}
+            
             <div className="flex-1 overflow-y-auto p-6">
               {cartItems.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-gray-400">
@@ -80,7 +80,7 @@ const CartDrawer = ({ isOpen, onClose, cartItems, updateQuantity, removeItem }) 
               )}
             </div>
 
-            {/* Footer */}
+           
             {cartItems.length > 0 && (
               <div className="p-6 border-t border-dark-800 bg-dark-900">
                 <div className="flex justify-between text-lg font-medium mb-6">
